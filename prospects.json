@@ -1,0 +1,302 @@
+[
+  {
+    "scenarioId": "MP-001",
+    "company": "Horizon Law Group",
+    "industry": "Legal Services",
+    "location": "NY",
+    "employeeCount": 45,
+    "emailPlatform": "Microsoft 365",
+    "persona": {
+      "name": "Emily Parker",
+      "title": "Managing Partner",
+      "roleDescription": "Co‑founder who oversees firm strategy, key client relationships, and technology purchasing decisions."
+    },
+    "painPoints": [
+      "High‑value clients frequently targeted by CEO‑fraud phishing schemes",
+      "Staff loses hours daily wading through newsletters and marketing spam",
+      "Concern about inadvertent exposure of privileged information via email"
+    ],
+    "triggerEvent": "Near‑miss wire‑fraud incident impersonating Emily culminated in a $450k transfer attempt last quarter.",
+    "currentSolution": "Built‑in Microsoft Defender + Proofpoint Essentials spam filter",
+    "likelyObjections": [
+      "We already pay for Microsoft E5—why add another layer?",
+      "Partners dislike any friction that slows down sending or receiving messages"
+    ],
+    "decisionCriteria": [
+      "Demonstrably lower risk of BEC and spoofing",
+      "Seamless user experience in Outlook and mobile",
+      "Built‑in encryption for client correspondence (ABA confidentiality)"
+    ],
+    "desiredOutcome": "Restore partner confidence that inbox contents are safe while cutting spam by 90 %+."
+  },
+  {
+    "scenarioId": "MP-002",
+    "company": "Meridian Family Clinic",
+    "industry": "Healthcare – Outpatient",
+    "location": "TX",
+    "employeeCount": 72,
+    "emailPlatform": "Google Workspace",
+    "persona": {
+      "name": "Dr. Raj Patel",
+      "title": "Practice Administrator",
+      "roleDescription": "Runs day‑to‑day operations, compliance, and vendor selection for a multi‑site medical practice."
+    },
+    "painPoints": [
+      "HIPAA fines loom large; nurses occasionally email PHI unencrypted",
+      "Ransomware‑laden phishing emails reach front‑desk staff weekly",
+      "Current Barracuda gateway breaks whenever Google updates APIs"
+    ],
+    "triggerEvent": "State health department audit flagged weak outbound encryption controls.",
+    "currentSolution": "Aging Barracuda Cloud Control + manual TLS settings",
+    "likelyObjections": [
+      "Worried about migration downtime during flu‑season rush",
+      "Assumes stronger security invariably brings complicated logins for patients"
+    ],
+    "decisionCriteria": [
+      "HIPAA‑compliant encryption that’s painless for patients",
+      "Zero trust filtering that stops ransomware before inbox",
+      "Rapid deployment with no MX change preferred"
+    ],
+    "desiredOutcome": "Pass upcoming HIPAA audit and eliminate staff clicks on phishing links."
+  },
+  {
+    "scenarioId": "MP-003",
+    "company": "Crestview Financial Advisors",
+    "industry": "Wealth Management",
+    "location": "IL",
+    "employeeCount": 28,
+    "emailPlatform": "Microsoft 365",
+    "persona": {
+      "name": "Laura Chen",
+      "title": "Chief Compliance Officer",
+      "roleDescription": "Ensures SEC/FINRA compliance, runs cybersecurity tabletop exercises, and signs off on tech budgets."
+    },
+    "painPoints": [
+      "Clients’ PII frequently transmitted without encryption by advisors",
+      "Phishing simulations show 18 % click‑through rate despite training",
+      "Need WORM‑compliant archiving for seven‑year retention"
+    ],
+    "triggerEvent": "FINRA exam cited insufficient supervision of email DLP policies.",
+    "currentSolution": "Mimecast for inbound + ShareFile links for ad‑hoc encryption",
+    "likelyObjections": [
+      "Finance team feels current stack is ‘good enough’ and sunk‑cost into Mimecast",
+      "Board skeptical of vendor churn"
+    ],
+    "decisionCriteria": [
+      "Single platform covering zero trust, encryption, and archiving",
+      "Lower administrative overhead for small IT staff",
+      "Quantifiable reduction in phishing risk"
+    ],
+    "desiredOutcome": "Prove to the board that moving to a unified zero‑trust platform lowers both risk and cost."
+  },
+  {
+    "scenarioId": "MP-004",
+    "company": "Summit Manufacturing Co.",
+    "industry": "Light Manufacturing",
+    "location": "OH",
+    "employeeCount": 180,
+    "emailPlatform": "On‑Prem Exchange (migrating to M365)",
+    "persona": {
+      "name": "Chris Adams",
+      "title": "IT Manager",
+      "roleDescription": "Runs a two‑person IT team, juggling production system uptime and cybersecurity."
+    },
+    "painPoints": [
+      "Legacy spam gateway (SonicWall ESA) misses modern phishing attacks",
+      "Executives complain about inbox clutter delaying quote approvals",
+      "Plant floor can’t afford down‑time during migration to M365"
+    ],
+    "triggerEvent": "CEO fell for fraudulent purchase‑order email; finance paid $37k to attacker.",
+    "currentSolution": "SonicWall ESA + Symantec endpoint AV",
+    "likelyObjections": [
+      "Budget is tight until next fiscal year",
+      "Fear that new filtering could block legitimate supplier EDI traffic"
+    ],
+    "decisionCriteria": [
+      "Proof of minimal false positives on supplier domains",
+      "Quick cut‑over without MX disruptions",
+      "Pricing that aligns with mid‑market budgets"
+    ],
+    "desiredOutcome": "Protect execs from spear‑phishing and cut spam so quotes go out faster."
+  },
+  {
+    "scenarioId": "MP-005",
+    "company": "Riverdale School District",
+    "industry": "Education – K‑12",
+    "location": "NC",
+    "employeeCount": 650,
+    "emailPlatform": "Google Workspace for Education",
+    "persona": {
+      "name": "Karen Lopez",
+      "title": "Director of Technology",
+      "roleDescription": "Oversees district IT security for 12 schools, reporting to the superintendent and board."
+    },
+    "painPoints": [
+      "Students receive phishing emails that bypass basic Google filtering",
+      "Teachers inundated with spam newsletters and robocall voicemails",
+      "State grants mandate FERPA‑compliant email encryption for student data"
+    ],
+    "triggerEvent": "Ransomware attack at neighboring district prompted board to demand action.",
+    "currentSolution": "Google default settings + quarterly phishing drills",
+    "likelyObjections": [
+      "Public school budget cycles require competitive bids",
+      "Need assurance of CIPA compliance and no student data mining"
+    ],
+    "decisionCriteria": [
+      "Education pricing and multi‑tenant admin console",
+      "Built‑in user‑friendly encryption for student records",
+      "Demonstrable reduction in spam/graymail to lighten teacher workload"
+    ],
+    "desiredOutcome": "Achieve board‑mandated security upgrade without hindering learning tools."
+  },
+  {
+    "scenarioId": "MP-006",
+    "company": "Evergreen Nonprofit Services",
+    "industry": "Nonprofit – Social Services",
+    "location": "OR",
+    "employeeCount": 38,
+    "emailPlatform": "Microsoft 365 Nonprofit",
+    "persona": {
+      "name": "Marcus Riley",
+      "title": "Executive Director",
+      "roleDescription": "Leads fundraising and program delivery; makes final calls on IT spend with board treasurer."
+    },
+    "painPoints": [
+      "Spear‑phishing campaigns target donors and staff impersonating Marcus",
+      "Volunteers use personal email accounts—creating shadow‑IT risk",
+      "Limited IT resources; current spam filter generates too many false positives"
+    ],
+    "triggerEvent": "A donor nearly wired $10k to a fake account after receiving spoofed email.",
+    "currentSolution": "Microsoft Defender only",
+    "likelyObjections": [
+      "Nonprofit funds must be justified to donors",
+      "Concern that new system could confuse elderly volunteers"
+    ],
+    "decisionCriteria": [
+      "Nonprofit discounts and simple UX",
+      "Feature to create temporary/burner addresses for campaigns",
+      "Board wants metrics showing ROI on security spend"
+    ],
+    "desiredOutcome": "Protect donor trust and staff time without adding complexity."
+  },
+  {
+    "scenarioId": "MP-007",
+    "company": "Atlas Engineering Solutions",
+    "industry": "Professional Services – Engineering",
+    "location": "CO",
+    "employeeCount": 120,
+    "emailPlatform": "Microsoft 365",
+    "persona": {
+      "name": "Sophia Nguyen",
+      "title": "Operations Manager",
+      "roleDescription": "Heads IT and project operations, ensuring secure collaboration with clients and contractors."
+    },
+    "painPoints": [
+      "Large CAD files can’t be sent securely via current email limits",
+      "Consultants complain of constant vendor spam clobbering project updates",
+      "Must maintain ITAR compliance for government contracts"
+    ],
+    "triggerEvent": "Lost a bid because a critical encrypted file failed to transmit on time.",
+    "currentSolution": "OneDrive links + Trend Micro cloud gateway",
+    "likelyObjections": [
+      "Engineers skeptical of anything they perceive as slowing email",
+      "Question whether zero trust is overkill for mid‑sized firm"
+    ],
+    "decisionCriteria": [
+      "Integrated encrypted file‑transfer with no size limits",
+      "Spam reduction without blocking client project updates",
+      "ITAR/DFARS compliance evidence"
+    ],
+    "desiredOutcome": "Streamline secure file sharing and reduce email clutter for engineers."
+  },
+  {
+    "scenarioId": "MP-008",
+    "company": "Neptune Logistics Group",
+    "industry": "Logistics & Transportation",
+    "location": "FL",
+    "employeeCount": 260,
+    "emailPlatform": "Microsoft 365",
+    "persona": {
+      "name": "Diego Martinez",
+      "title": "Chief Information Officer",
+      "roleDescription": "Owns technology roadmap, uptime SLA, and cybersecurity posture across 9 depots."
+    },
+    "painPoints": [
+      "Phishing attachments disguised as Bills of Lading infect dispatch PCs",
+      "Routing emails span multiple time‑zones; inbox noise slows responses",
+      "C‑suite expects SOC2 readiness in 6 months"
+    ],
+    "triggerEvent": "Sophisticated BEC led to $90k fraudulent payment to fake freight broker.",
+    "currentSolution": "Microsoft EOP + KnowBe4 training",
+    "likelyObjections": [
+      "Believes staff training is the real issue, not technology",
+      "Requires assurance that supplier invoices won’t be delayed"
+    ],
+    "decisionCriteria": [
+      "Proof of zero‑day malware detection rates",
+      "Bundler/X‑Ray features that accelerate rather than hinder dispatch workflow",
+      "SOC2 attestations from vendor"
+    ],
+    "desiredOutcome": "Cut incident rate by 80 % before SOC2 audit and keep freight ops flowing."
+  },
+  {
+    "scenarioId": "MP-009",
+    "company": "Blue Harbor Real Estate",
+    "industry": "Real Estate Brokerage",
+    "location": "SC",
+    "employeeCount": 54,
+    "emailPlatform": "Google Workspace",
+    "persona": {
+      "name": "Olivia Bennett",
+      "title": "Broker/Owner",
+      "roleDescription": "Runs multi‑office brokerage; oversees agent tech stack and client transaction security."
+    },
+    "painPoints": [
+      "Wire‑fraud scams targeting homebuyers with spoofed payoff instructions",
+      "Agents overwhelmed by lead‑gen spam; missing actual closing emails",
+      "Needs simple encryption for contracts with e‑signatures"
+    ],
+    "triggerEvent": "Buyer lost $140k down payment due to spoofed settlement statement last month.",
+    "currentSolution": "Google native filters + ad‑hoc SecureZip attachments",
+    "likelyObjections": [
+      "Agents resist new logins/apps on mobile devices",
+      "Perception that additional security slows fast‑moving deals"
+    ],
+    "decisionCriteria": [
+      "Mobile‑friendly, plugin‑free encryption (e.g., Bracket)",
+      "Heads‑Up Display to clearly flag spoofed emails",
+      "Ability to create burner addresses for online listings"
+    ],
+    "desiredOutcome": "Protect clients from wire‑fraud while keeping deal flow quick and easy."
+  },
+  {
+    "scenarioId": "MP-010",
+    "company": "NovaTech Startup Inc.",
+    "industry": "Software – SaaS",
+    "location": "CA",
+    "employeeCount": 85,
+    "emailPlatform": "Microsoft 365",
+    "persona": {
+      "name": "Daniel Ross",
+      "title": "VP of Engineering",
+      "roleDescription": "Leads dev teams and doubles as interim security lead during SOC2 push."
+    },
+    "painPoints": [
+      "Developers receive hundreds of automated GitLab alerts and spam, burying customer support emails",
+      "Need to demonstrate zero‑trust controls to enterprise prospects",
+      "Worries about phishing compromising OAuth tokens used in CI/CD pipeline"
+    ],
+    "triggerEvent": "Enterprise prospect requested proof of email‑centric zero trust controls for vendor risk questionnaire.",
+    "currentSolution": "Microsoft Defender + Postmark for outbound alerts",
+    "likelyObjections": [
+      "Start‑up budget conscious; prefers consumption‑based pricing",
+      "Dev team fears false positives could break automated alert flows"
+    ],
+    "decisionCriteria": [
+      "API‑level deployment—no MX change",
+      "Spotlight search to quickly locate missing alert emails",
+      "Metrics/reporting to satisfy SOC2 Type II evidence"
+    ],
+    "desiredOutcome": "Win enterprise deals by proving robust zero‑trust email controls without disrupting dev workflows."
+  }
+]
