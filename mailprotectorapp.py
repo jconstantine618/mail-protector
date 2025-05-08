@@ -1,5 +1,3 @@
-# mailprotectorapp.py
-
 import os, json, random, re, datetime, textwrap, pathlib
 import streamlit as st
 from dotenv import load_dotenv
@@ -34,8 +32,9 @@ def load_prospects():
 
 prospects = load_prospects()
 
-# ---------- SIDEBAR ----------
+# ---------- SIDEBAR WITH DROPDOWN ----------
 st.sidebar.title("📄 Prospect Selector")
+
 if "prospect" not in st.session_state:
     st.session_state.prospect = random.choice(prospects)
     st.session_state.chat_log = []
@@ -48,9 +47,18 @@ def pick_new(name):
     st.session_state.ended = False
     st.session_state.score = None
 
-for p in prospects:
-    if st.sidebar.button(f"{p['scenarioId']} – {p['company']}", key=p["scenarioId"]):
-        pick_new(p["scenarioId"])
+prospect_labels = [f"{p['scenarioId']} – {p['company']}" for p in prospects]
+current_index = next(i for i, p in enumerate(prospects) if p == st.session_state.prospect)
+
+selected_label = st.sidebar.selectbox(
+    "Choose a prospect scenario:",
+    prospect_labels,
+    index=current_index
+)
+
+selected_prospect = next(p for p in prospects if f"{p['scenarioId']} – {p['company']}" == selected_label)
+if selected_prospect != st.session_state.prospect:
+    pick_new(selected_prospect["scenarioId"])
 
 st.sidebar.markdown("---")
 if st.sidebar.button("🔄 Reset Chat"):
@@ -110,7 +118,7 @@ def persona_reply(user_msg):
 
 # ---------- SCORING ----------
 def score_conversation():
-    log = " ".join([e["content"].lower() for e in st.session_state.chat_log if e["role"]=="user"])
+    log = " ".join([e["content"].lower() for e in st.session_state.chat_log if e["role"] == "user"])
     score = 0
     if re.search(st.session_state.prospect["persona"]["name"].split()[0].lower(), log):
         score += 15
@@ -152,9 +160,19 @@ with st.form("chat_form", clear_on_submit=True):
 # ---------- RENDER CHAT ----------
 for entry in st.session_state.chat_log:
     if entry["role"] == "assistant":
-        chat_placeholder.chat_message("assistant").markdown(f"🟡 **Prospect:** {entry['content']}")
+        with chat_placeholder.container():
+            st.markdown(
+                f"<div style='background-color:#fff3cd; padding:10px; border-radius:10px; margin:5px 0;'>"
+                f"<b>Prospect:</b> {entry['content']}</div>",
+                unsafe_allow_html=True
+            )
     else:
-        chat_placeholder.chat_message("user").markdown(f"🔴 **You:** {entry['content']}")
+        with chat_placeholder.container():
+            st.markdown(
+                f"<div style='background-color:#cce5ff; padding:10px; border-radius:10px; margin:5px 0;'>"
+                f"<b>You:</b> {entry['content']}</div>",
+                unsafe_allow_html=True
+            )
 
 # ---------- END + SCORE ----------
 st.markdown("---")
