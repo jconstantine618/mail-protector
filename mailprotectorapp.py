@@ -13,7 +13,7 @@ load_dotenv()
 OPENAI_KEY = os.getenv("OPENAI_API_KEY", st.secrets.get("OPENAI_API_KEY", ""))
 openai.api_key = OPENAI_KEY
 MODEL        = "gpt-4o-mini"          # adjust if desired
-DATA_FILE    = "prospects_mailprotector.json"
+DATA_FILE    = "data/prospects_mailprotector.json"
 TRANSCRIPTS  = pathlib.Path("transcripts")
 TRANSCRIPTS.mkdir(exist_ok=True)
 CLOSE_PHRASES = [
