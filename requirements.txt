@@ -1,0 +1,4 @@
+# requirements.txt  ── Mailprotector Sales‑Training Chatbot
+streamlit>=1.32            # web UI
+openai>=1.13               # OpenAI API client
+python-dotenv>=1.0         # read .env for local dev
